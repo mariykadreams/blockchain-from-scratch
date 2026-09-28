@@ -1,0 +1,45 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.15, pytest-9.1.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/claude/blockchain-lab
+plugins: anyio-4.13.0
+collecting ... collected 36 items
+
+tests/test_chain.py::test_genesis_block_is_deterministic PASSED          [  2%]
+tests/test_chain.py::test_mined_block_satisfies_difficulty PASSED        [  5%]
+tests/test_chain.py::test_balances_update_after_transaction PASSED       [  8%]
+tests/test_chain.py::test_full_chain_validates_when_untouched PASSED     [ 11%]
+tests/test_chain.py::test_attack_amount_tampering_detected_by_full_validation PASSED [ 13%]
+tests/test_chain.py::test_attack_recompute_hash_after_tampering_breaks_chain_link PASSED [ 16%]
+tests/test_chain.py::test_attack_forged_signature_rejected PASSED        [ 19%]
+tests/test_chain.py::test_attack_double_spend_within_same_block_rejected PASSED [ 22%]
+tests/test_chain.py::test_attack_replay_confirmed_transaction_rejected PASSED [ 25%]
+tests/test_chain.py::test_chain_save_and_load_roundtrip PASSED           [ 27%]
+tests/test_chain.py::test_difficulty_increases_when_blocks_are_too_fast PASSED [ 30%]
+tests/test_chain.py::test_difficulty_decreases_when_blocks_are_too_slow PASSED [ 33%]
+tests/test_mempool.py::test_reject_invalid_signature PASSED              [ 36%]
+tests/test_mempool.py::test_reject_insufficient_balance PASSED           [ 38%]
+tests/test_mempool.py::test_reject_wrong_nonce PASSED                    [ 41%]
+tests/test_mempool.py::test_reject_duplicate_transaction_in_pool PASSED  [ 44%]
+tests/test_mempool.py::test_accepts_valid_transaction_and_accounts_for_pending_balance PASSED [ 47%]
+tests/test_mempool.py::test_reject_replay_of_confirmed_transaction PASSED [ 50%]
+tests/test_merkle.py::test_merkle_root_single_element_equals_the_element_itself PASSED [ 52%]
+tests/test_merkle.py::test_merkle_root_even_number_of_elements PASSED    [ 55%]
+tests/test_merkle.py::test_merkle_root_odd_number_of_elements_duplicates_last_hash PASSED [ 58%]
+tests/test_merkle.py::test_merkle_root_changes_if_any_transaction_changes PASSED [ 61%]
+tests/test_merkle.py::test_merkle_proof_verifies_for_every_leaf[1] PASSED [ 63%]
+tests/test_merkle.py::test_merkle_proof_verifies_for_every_leaf[2] PASSED [ 66%]
+tests/test_merkle.py::test_merkle_proof_verifies_for_every_leaf[3] PASSED [ 69%]
+tests/test_merkle.py::test_merkle_proof_verifies_for_every_leaf[4] PASSED [ 72%]
+tests/test_merkle.py::test_merkle_proof_verifies_for_every_leaf[5] PASSED [ 75%]
+tests/test_merkle.py::test_merkle_proof_verifies_for_every_leaf[7] PASSED [ 77%]
+tests/test_merkle.py::test_merkle_proof_verifies_for_every_leaf[8] PASSED [ 80%]
+tests/test_merkle.py::test_merkle_proof_fails_for_wrong_root PASSED      [ 83%]
+tests/test_transaction.py::test_wallet_address_derived_from_public_key PASSED [ 86%]
+tests/test_transaction.py::test_signature_valid_for_correct_transaction PASSED [ 88%]
+tests/test_transaction.py::test_signature_invalid_after_tampering_amount PASSED [ 91%]
+tests/test_transaction.py::test_signature_invalid_with_wrong_signer PASSED [ 94%]
+tests/test_transaction.py::test_canonical_json_is_deterministic_regardless_of_key_order PASSED [ 97%]
+tests/test_transaction.py::test_txid_changes_if_any_signed_field_changes PASSED [100%]
+
+============================== 36 passed in 0.22s ==============================

@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+chain_*.json
+*.wallet.json
+wallet_*.json
+alice.json
+bob.json
+miner.json
+venv/
+*.egg-info/

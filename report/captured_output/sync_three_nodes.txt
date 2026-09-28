@@ -1,0 +1,11 @@
+Намайновано блок #1, транзакцій: 1, nonce=147601
+=== висоти всіх трьох вузлів (синхронізація) ===
+node 5001:
+{"difficulty":4,"height":1,"total_work":131072}
+
+node 5002:
+{"difficulty":4,"height":1,"total_work":131072}
+
+node 5003:
+{"difficulty":4,"height":1,"total_work":131072}
+
